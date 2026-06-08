@@ -86,10 +86,11 @@
           </h4>
           <p class="profile-date">
             🎂
-            <template v-if="person.month === 0 && person.day === 0"
-              >未知</template
-            >
-            <template v-else>{{ person.month }}月{{ person.day }}日</template>
+            <template v-if="person.month === 0 && person.day === 0">
+              <!-- 🌟 核心分流：根据寿星时区，智能输出不同地区的未知文本标识 -->
+              {{ person.timezone === "Asia/Tokyo" ? "？？？" : "未知" }}
+            </template>
+            <template v-else> {{ person.month }}月{{ person.day }}日 </template>
           </p>
         </div>
 

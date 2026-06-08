@@ -175,6 +175,7 @@
     "timezone": "Asia/Tokyo",
     "avatar": "chara_174_h_f"
   },
+
   {
     "id": 315,
     "name": "Rielle Corallia",
@@ -191,7 +192,22 @@
     "timezone": "Asia/Tokyo",
     "avatar": "chara_314_h_f"
   },
-
+  {
+    "id": 181,
+    "name": "Grim",
+    "month": 0,
+    "day": 0,
+    "timezone": "Asia/Tokyo",
+    "avatar": "chara_181_h_f"
+  },
+  {
+    "id": 182,
+    "name": "Dire Crowley",
+    "month": 0,
+    "day": 0,
+    "timezone": "Asia/Tokyo",
+    "avatar": "chara_182_h_f"
+  },
   {
     "id": 183,
     "name": "Divus Crewel",

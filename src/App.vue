@@ -2,11 +2,11 @@
   <div class="app-wrapper">
     <!-- 🌟 全新升级：全局独立功能页眉 -->
     <header class="global-app-header">
-      <h1 class="main-title">🍊XYTX & 🪞TWST<wbr />全角色生日雷达</h1>
+      <h1 class="main-title">🍊新月同行 & 🪞扭曲仙境<wbr />全角色生日雷达</h1>
       <p class="app-description">
-        &emsp;&emsp;本页面可用于快速追踪查询《新月同行》和《扭曲仙境》中主要角色的生日信息。<br />
-        &emsp;&emsp;预告板块会在生日当天高亮展示寿星卡片和生日结束2小时倒计时，已针对《扭曲仙境》角色进行日本时区适配。<br />
-        &emsp;&emsp;若要对数据补充纠错请通过<i>1304158431@qq.com</i>联系项目维护人员。
+        你可以在此快速浏览查询《新月同行》和《扭曲仙境》的角色生日。
+        全版块已针对《扭曲仙境》角色进行日本时区适配。<br />
+        如需对数据进行补充纠错请通过<i>1304158431@qq.com</i>联系项目维护人员。
       </p>
     </header>
 
