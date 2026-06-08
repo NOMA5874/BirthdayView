@@ -43,21 +43,19 @@ let timerId: number | null = null;
 
 onMounted(async () => {
   try {
-    const res = await fetch("/birthdays.json");
+    // 1. 获取 Vite 自动注入的二级路径（此时它等于 "/BirthdayView/"）
+    const baseUrl = import.meta.env.BASE_URL;
+
+    // 2. 智能剔除边缘多余的斜杠，精准组装出线上静态 API 路径
+    const jsonPath = `${baseUrl.endsWith("/") ? baseUrl : baseUrl + "/"}birthdays.json`;
+
+    // 3. 发射请求（此时线上会精准访问: /BirthdayView/birthdays.json）
+    const res = await fetch(jsonPath);
+    if (!res.ok) throw new Error(`HTTP 状态码异常: ${res.status}`);
+
     allBirthdays.value = await res.json();
   } catch (e) {
     console.error("加载全局生日名册失败", e);
-  }
-
-  // 🌟 核心：启动每秒 1 次的中央时间泵
-  timerId = window.setInterval(() => {
-    heartBeatTrigger.value++;
-  }, 60000);
-
-  const savedTheme = localStorage.getItem("app_theme");
-  if (savedTheme === "dark") {
-    isDark.value = true;
-    document.documentElement.setAttribute("data-theme", "dark");
   }
 });
 
